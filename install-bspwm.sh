@@ -7,8 +7,12 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Change Debian to SID branch
-# cp /etc/apt/sources.list /etc/apt/sources/list/bak
+# cp /etc/apt/sources.list /etc/apt/sources,list.bak
 # cp sources.list /etc/apt/sources.list
+
+Change Devuan to Ceres branch (Same as Debian SID branch)
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+cp sources.list.devuan /etc/apt/sources.list
 
 username=dcopel1
 builddir=$(pwd)
