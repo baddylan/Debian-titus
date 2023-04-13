@@ -16,18 +16,18 @@ Xft.lcdfilter:                  lcddefault
 #define ICON_SIZE 9
 #define EMOJI_SIZE 9
 #define NERD_SIZE 9
-URxvt.font: xft:FONT:style=Medium:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
-URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
-URxvt.italicFont: xft:FONT:style=Italic:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
-URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
+URxvt.font: 			xft:FONT:style=Medium:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
+URxvt.boldFont: 		xft:FONT:style=Bold:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
+URxvt.italicFont: 		xft:FONT:style=Italic:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
+URxvt.boldItalicFont: 		xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true, xft:ICON:size=ICON_SIZE:antialias=true, xft:NERD_FONT:size=NERD_SIZE:antialias=true, xft:EMOJI:size=EMOJI_SIZE:antialias=true
 
 !Colors
 #include ".Xnord"
-!*.font: xft:FiraCode Nerd Font Mono:style=Medium:size=14:antialias=true
+!*.font: 			xft:FiraCode Nerd Font Mono:style=Medium:size=14:antialias=true
 
 URxvt.depth:                    32
 URxvt*lineSpace:                0
-URxvt*letterSpace:		        -1
+URxvt*letterSpace:		-1
 URxvt.iso14755:                 false
 URxvt.iso14755_52:              false
 URxvt*geometry:                 184x44
@@ -35,18 +35,18 @@ URxvt.scrollBar:                false
 URxvt*loginShell:               true
 URxvt.internalBorder:           88
 
-URxvt.perl-ext:	 		        default,matcher,resize-font
+URxvt.perl-ext:	 		default,matcher,resize-font
 URxvt.url-launcher:             linkhandler
-URxvt.matcher.button: 		    1
-URxvt.keysym.M-r:    		    perl:matcher:last
-URxvt.keysym.M-l:   		    perl:matcher:list
-URxvt.keysym.M-e:		        perl:matcher:select
-URxvt.saveLine:			        10000
-URxvt.cursorBlink: 		        true
-URxvt.cursorUnderline: 		    true
+URxvt.matcher.button: 		1
+URxvt.keysym.M-r:    		perl:matcher:last
+URxvt.keysym.M-l:   	        perl:matcher:list
+URxvt.keysym.M-e:		perl:matcher:select
+URxvt.saveLine:			10000
+URxvt.cursorBlink: 		true
+URxvt.cursorUnderline: 		true
 
-URxvt*inheritPixmap:    	    false
-URxvt*transparent:      	    false
+URxvt*inheritPixmap:    	false
+URxvt*transparent:      	false
 
 ! do not scroll with output
 URxvt*scrollTtyOutput:          false
@@ -74,63 +74,102 @@ URxvt.secondaryScroll:          0
 URxvt.secondaryWheel:           1
 
 ! Change keybinding for copying/pasting
-URxvt.keysym.Control-Meta-c: builtin-string:
-URxvt.keysym.Control-Meta-v: builtin-string:
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Control-Meta-c:    builtin-string:
+URxvt.keysym.Control-Meta-v:    builtin-string:
+URxvt.keysym.Shift-Control-V:   eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
 
 
 ! xterm settings
 
-xterm.vt100.termName: xterm-256color
-xterm.vt100.scaleHeight: 1.0
-XTerm.vt100.geometry: 80x32
-xterm.vt100.internalBorder: 44
-xterm.vt100.borderWidth: 0
+xterm.vt100.termName:           xterm-256color
+xterm.vt100.scaleHeight:        1.0
+XTerm.vt100.geometry:           80x32
+xterm.vt100.internalBorder:     44
+xterm.vt100.borderWidth:        0
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
-XTerm*loginshell: true
-XTerm*savelines: 16384
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*loginshell:               true
+XTerm*savelines:                16384
+XTerm*charClass:                33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 !XTerm.vt100.metaSendsEscape: true
 
-xterm.vt100.utf8: true
-XTerm.vt100.locale: true
-xterm.vt100.scrollBar: false
-xterm.vt100.cursorBlink: true
-!xterm.vt100.cursorUnderline: true
-xterm.vt100.selectToClipboard: true
-xterm.vt100.trimSelection: true
-xterm.vt100.renderFont: true
-xterm.vt100.wideChars: true
-xterm.vt100.visualBell: false
-xterm.vt100.forceBoxChars: true
-xterm.vt100.font-linedrawing: true
-*VT100*translations: #override Shift <Btn1Up>: exec-formatted("linkhandler '%t'", PRIMARY)
+xterm.vt100.utf8:               true
+XTerm.vt100.locale:             true
+xterm.vt100.scrollBar:          false
+xterm.vt100.cursorBlink:        true
+!xterm.vt100.cursorUnderline:   true
+xterm.vt100.selectToClipboard:  true
+xterm.vt100.trimSelection:      true
+xterm.vt100.renderFont:         true
+xterm.vt100.wideChars:          true
+xterm.vt100.visualBell:         false
+xterm.vt100.forceBoxChars:      true
+xterm.vt100.font-linedrawing:   true
+*VT100*translations:            #override Shift <Btn1Up>: exec-formatted("linkhandler '%t'", PRIMARY)
 
 
-xterm.vt100.translations: #override \n\
+xterm.vt100.translations: 	#override \n\
     Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
     Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
 
-XTerm*faceSize: 10
-xterm.vt100.faceName: monospace
+XTerm*faceSize:                 10
+xterm.vt100.faceName:           monospace
 !xterm.vt100.faceNameDoublesize: Symbola:antialias=true
 !xterm.vt100.wideFont: FiraCode Nerd Font Mono:size=9:antialias=true
 
 ! stop output to terminal from jumping down to bottom of scroll again
-XTerm*scrollTtyOutput: false
+XTerm*scrollTtyOutput:          false
 
+! UXterm settings
+
+uxterm*termName:		xterm-256color
+uxterm*scaleHeight:		1.0
+uxterm*geometry:		80x32
+uxterm*internalBorder:		44
+uxterm*borderWidth:		0
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+uxterm*loginshell:		true
+uxterm*savelines:		16384
+uxterm*charClass:		33:48,36-47:48,58-59:49,61:48,63-64:48,95:48,126:48
+!uxterm*metaSendsEscape:		true
+
+uxterm*utf8:			true
+uxterm.vt100.locale:             true
+uxterm.vt100.scrollBar:          false
+uxterm.vt100.cursorBlink:        true
+!uxterm.vt100.cursorUnderline:   true
+uxterm.vt100.selectToClipboard:  true
+uxterm.vt100.trimSelection:      true
+uxterm.vt100.renderFont:         true
+uxterm.vt100.wideChars:          true
+uxterm.vt100.visualBell:         false
+uxterm.vt100.forceBoxChars:      true
+uxterm.vt100.font-linedrawing:   true
+*VT100*translations:            #override Shift <Btn1Up>: exec-formatted("linkhandler '%t'", PRIMARY)
+
+
+uxterm.vt100.translations: 	#override \n\
+    Shift Ctrl <KeyPress> v:insert-selection(CLIPBOARD) \n\
+    Shift Ctrl <KeyPress> c:select-set(CLIPBOARD)
+
+uxterm*faceSize:                 10
+uxterm.vt100.faceName:           monospace
+!uxterm.vt100.faceNameDoublesize: Symbola:antialias=true
+!uxterm.vt100.wideFont: FiraCode Nerd Font Mono:size=9:antialias=true
+
+! stop output to terminal from jumping down to bottom of scroll again
+uxterm*scrollTtyOutput:          false
 
 ! xst configs
 !st.font: spectrum berry:pixelsize=12:antialias=false:autohint=false;,Cozette:pixelsize=12:antialias=false:autohint=false;,Twemoji:pixelsize=10:antialias=true:autohint=true;,FiraCode Nerd Font Mono:pixelsoze=10:antialias=true:autohint=true
-st.font: monospace:pixelsize=20:antialias=true:autohint=true
-st.alpha: 1
-st.borderpx: 44
-st.cursorshape: 3
-st.disablebold: 0
-st.disableitalics: 0
-st.boxdraw: 1
-st.boxdraw_bold: 1
-st.boxdraw_braille: 1
-st.chscale:           1.0
-st.cwscale:           1.0
+st.font:                        monospace:pixelsize=20:antialias=true:autohint=true
+st.alpha:                       1
+st.borderpx:                    44
+st.cursorshape: 		3
+st.disablebold: 		0
+st.disableitalics: 		0
+st.boxdraw: 			1
+st.boxdraw_bold: 		1
+st.boxdraw_braille: 		1
+st.chscale:           		1.0
+st.cwscale:           		1.0
