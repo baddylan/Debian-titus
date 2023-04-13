@@ -43,6 +43,13 @@ nala install feh bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit x
 # Installing other less important Programs
 nala install neofetch flameshot psmisc mangohud lxappearance papirus-icon-theme fonts-noto-color-emoji sddm -y
 
+# Install brave-browser
+sudo nala install apt-transport-https curl -y
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo nala update
+sudo nala install brave-browser -y
+
 # Download Nordic Theme
 cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
@@ -84,3 +91,6 @@ fi
 
 # Polybar configuration
 bash scripts/changeinterface
+
+# Enable graphical login.
+/etc/init.d/sddm start
